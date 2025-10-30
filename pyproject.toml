@@ -48,5 +48,7 @@ filterwarnings = [
     "ignore::PendingDeprecationWarning",
 ]
 
-[tool.setuptools]
-packages = ["immanuel"]
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["immanuel*"]
+exclude = ["specs*", "profiling*", "tests*"]
